@@ -1,0 +1,90 @@
+[
+    {
+        "id": "rdr2",
+        "name": "Red Dead Redemption 2",
+        "description": "Explora el Salvaje Oeste con Arthur Morgan y la banda de Van der Linde.",
+        "category": "accion",
+        "price": 39.99,
+        "stock": 5,
+        "badge": "MÁS VENDIDO",
+        "art": "🤠",
+        "theme": "red"
+    },
+    {
+        "id": "hollow-knight",
+        "name": "Hollow Knight",
+        "description": "Adéntrate en Hallownest, un reino subterráneo lleno de secretos y criaturas.",
+        "category": "aventura",
+        "price": 14.99,
+        "stock": 8,
+        "badge": "INDIE FAVORITO",
+        "art": "🪲",
+        "theme": "blue"
+    },
+    {
+        "id": "minecraft",
+        "name": "Minecraft",
+        "description": "Construye, explora y sobrevive en un mundo hecho de bloques.",
+        "category": "simulacion",
+        "price": 26.95,
+        "stock": 10,
+        "badge": "",
+        "art": "⛏️",
+        "theme": "green"
+    },
+    {
+        "id": "the-witcher-3",
+        "name": "The Witcher 3: Wild Hunt",
+        "description": "Acompaña a Geralt en una aventura de fantasía por un mundo enorme.",
+        "category": "rol",
+        "price": 29.99,
+        "stock": 4,
+        "badge": "EDICIÓN COMPLETA",
+        "art": "⚔️",
+        "theme": "orange"
+    },
+    {
+        "id": "elden-ring",
+        "name": "Elden Ring",
+        "description": "Explora las Tierras Intermedias y enfréntate a desafiantes enemigos.",
+        "category": "rol",
+        "price": 49.99,
+        "stock": 3,
+        "badge": "DESTACADO",
+        "art": "🌟",
+        "theme": "purple"
+    },
+    {
+        "id": "cyberpunk-2077",
+        "name": "Cyberpunk 2077",
+        "description": "Vive una aventura de rol y acción en la futurista Night City.",
+        "category": "accion",
+        "price": 34.99,
+        "stock": 6,
+        "badge": "",
+        "art": "🤖",
+        "theme": "pink"
+    },
+    {
+        "id": "stardew-valley",
+        "name": "Stardew Valley",
+        "description": "Cuida tu propia granja, conoce a tus vecinos y descubre los secretos del valle.",
+        "category": "simulacion",
+        "price": 13.99,
+        "stock": 7,
+        "badge": "",
+        "art": "🌱",
+        "theme": "lime"
+    },
+    {
+        "id": "celeste",
+        "name": "Celeste",
+        "description": "Ayuda a Madeline a escalar una montaña en esta aventura de plataformas.",
+        "category": "indie",
+        "price": 19.99,
+        "stock": 0,
+        "badge": "AGOTADO",
+        "art": "🏔️",
+        "theme": "violet"
+    }
+]

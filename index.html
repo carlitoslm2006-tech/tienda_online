@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Descubre y compra tus próximos videojuegos favoritos en Pixelshop.">
+  <title>Pixelshop — Tienda de videojuegos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pixelshop, inicio">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span>PIXEL<span class="brand-accent">SHOP</span></span>
+    </a>
+    <button class="cart-button" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+      <span aria-hidden="true">▣</span>
+      <span>Ver cesta</span>
+      <span class="cart-count" id="cart-count" aria-label="0 artículos">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</p>
+        <h1 id="hero-title">Juega a lo<br>que <span>te mueve.</span></h1>
+        <p class="hero-description">Encuentra mundos nuevos, leyendas inolvidables y ese juego que no sabías que necesitabas.</p>
+        <a class="hero-link" href="#catalogo">Explorar catálogo <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-console">🎮</div>
+        <span class="hero-spark spark-one">✦</span>
+        <span class="hero-spark spark-two">✧</span>
+        <span class="hero-art-label">INSERT COIN<br><b>PRESS START</b></span>
+      </div>
+      <div class="hero-index" aria-hidden="true"><span>01</span> / 04</div>
+    </section>
+
+    <section class="catalog section-wrap" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SELECCIÓN PIXELSHOP</p>
+          <h2 id="catalog-title">El escaparate<span>.</span></h2>
+        </div>
+        <p class="catalog-note">Tu próxima historia favorita está a un clic.</p>
+      </div>
+
+      <nav class="category-list" id="category-list" aria-label="Filtrar por categoría"></nav>
+
+      <div class="catalog-controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="visually-hidden">Buscar videojuegos</span>
+          <input id="search-input" type="search" placeholder="Busca un juego o aventura..." autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <label class="sort-control">
+          <span>Ordenar:</span>
+          <select id="sort-select" aria-label="Ordenar videojuegos">
+            <option value="featured">Destacados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="name">Nombre: A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">◌</span>
+        <h3>No encontramos ese juego</h3>
+        <p>Prueba con otra búsqueda o categoría.</p>
+      </div>
+      <p class="load-error" id="load-error" role="alert" hidden></p>
+    </section>
+
+    <section class="bottom-banner section-wrap" aria-label="Información de la tienda">
+      <span class="banner-icon" aria-hidden="true">✦</span>
+      <p><strong>Grandes mundos, buen precio.</strong> Tu próxima partida empieza en Pixelshop.</p>
+      <a href="#catalogo" aria-label="Volver al catálogo">↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span>PIXEL<span class="brand-accent">SHOP</span></span>
+    </a>
+    <span>© 2025 Pixelshop · Hecho para quienes juegan.</span>
+    <span class="footer-status"><span class="live-dot"></span> SISTEMA ONLINE</span>
+  </footer>
+
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">TU SELECCIÓN</p>
+          <h2 id="cart-title">La cesta<span>.</span></h2>
+        </div>
+        <button class="icon-button" id="close-cart" type="button" aria-label="Cerrar cesta">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <span aria-hidden="true">▱</span>
+        <p>Tu cesta está esperando su primera aventura.</p>
+        <button class="text-button" id="continue-shopping" type="button">Explorar juegos <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="cart-footer" id="cart-footer" hidden>
+        <div class="cart-total"><span>Total</span><strong id="cart-total">0,00&nbsp;€</strong></div>
+        <button class="checkout-button" id="checkout-button" type="button">Finalizar compra <span aria-hidden="true">→</span></button>
+        <p class="checkout-note">Compra de demostración · no se realizará ningún pago</p>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="application/json" id="products-data">
+[{"id":"rdr2","name":"Red Dead Redemption 2","description":"Explora el Salvaje Oeste con Arthur Morgan y la banda de Van der Linde.","category":"accion","price":39.99,"stock":5,"badge":"MÁS VENDIDO","art":"🤠","theme":"red"},{"id":"hollow-knight","name":"Hollow Knight","description":"Adéntrate en Hallownest, un reino subterráneo lleno de secretos y criaturas.","category":"aventura","price":14.99,"stock":8,"badge":"INDIE FAVORITO","art":"🪲","theme":"blue"},{"id":"minecraft","name":"Minecraft","description":"Construye, explora y sobrevive en un mundo hecho de bloques.","category":"simulacion","price":26.95,"stock":10,"badge":"","art":"⛏️","theme":"green"},{"id":"the-witcher-3","name":"The Witcher 3: Wild Hunt","description":"Acompaña a Geralt en una aventura de fantasía por un mundo enorme.","category":"rol","price":29.99,"stock":4,"badge":"EDICIÓN COMPLETA","art":"⚔️","theme":"orange"},{"id":"elden-ring","name":"Elden Ring","description":"Explora las Tierras Intermedias y enfréntate a desafiantes enemigos.","category":"rol","price":49.99,"stock":3,"badge":"DESTACADO","art":"🌟","theme":"purple"},{"id":"cyberpunk-2077","name":"Cyberpunk 2077","description":"Vive una aventura de rol y acción en la futurista Night City.","category":"accion","price":34.99,"stock":6,"badge":"","art":"🤖","theme":"pink"},{"id":"stardew-valley","name":"Stardew Valley","description":"Cuida tu propia granja, conoce a tus vecinos y descubre los secretos del valle.","category":"simulacion","price":13.99,"stock":7,"badge":"","art":"🌱","theme":"lime"},{"id":"celeste","name":"Celeste","description":"Ayuda a Madeline a escalar una montaña en esta aventura de plataformas.","category":"indie","price":19.99,"stock":0,"badge":"AGOTADO","art":"🏔️","theme":"violet"}]
+  </script>
+  <script type="application/json" id="categories-data">
+[{"id":"todos","name":"Todos","icon":"✳"},{"id":"accion","name":"Acción","icon":"↗"},{"id":"aventura","name":"Aventura","icon":"◇"},{"id":"rol","name":"Rol","icon":"✧"},{"id":"indie","name":"Indie","icon":"★"},{"id":"simulacion","name":"Simulación","icon":"⌂"}]
+  </script>
+</body>
+</html>

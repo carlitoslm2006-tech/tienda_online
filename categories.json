@@ -1,0 +1,32 @@
+[
+    {
+        "id": "todos",
+        "name": "Todos",
+        "icon": "✳"
+    },
+    {
+        "id": "accion",
+        "name": "Acción",
+        "icon": "↗"
+    },
+    {
+        "id": "aventura",
+        "name": "Aventura",
+        "icon": "◇"
+    },
+    {
+        "id": "rol",
+        "name": "Rol",
+        "icon": "✧"
+    },
+    {
+        "id": "indie",
+        "name": "Indie",
+        "icon": "★"
+    },
+    {
+        "id": "simulacion",
+        "name": "Simulación",
+        "icon": "⌂"
+    }
+]
